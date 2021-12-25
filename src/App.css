@@ -1,0 +1,267 @@
+* {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Management rooming */
+.about__us {
+  font-weight: 800;
+  letter-spacing: 0.8rem;
+}
+.room__row {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.room__management {
+  background-color: #fff2f2;
+  padding: 5rem 0;
+  margin: 5rem 0;
+}
+.room__card {
+  outline: none;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+}
+.card-img-top {
+  height: 16rem !important;
+}
+.card-title {
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  line-height: 2rem;
+  font-style: italic;
+}
+.card {
+  width: 34rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  outline: none !important;
+  border: 0.5px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.card__status {
+  margin-bottom: 3rem;
+}
+
+.light__sensor,
+.pir__sensor {
+  font-weight: 800 !important;
+}
+.card-img-top {
+  opacity: 0.5;
+}
+.light__sensor {
+  color: maroon;
+}
+
+.pir__sensor {
+  color: green;
+}
+#light__Button1 {
+  width: 10rem;
+  outline: none;
+}
+.button2 {
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  opacity: 0.8;
+  letter-spacing: 0.2rem;
+  background-color: #ec1840;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  color: WHITE;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  font-family: "Roboto", sans-serif;
+  filter: hue-rotate(0deg);
+  border: 2px solid #d2bdff;
+  transition: all 0.1s linear;
+}
+
+.button2:hover {
+  opacity: 1;
+  border: 1px solid transparent;
+}
+.button2:hover span {
+  position: absolute;
+  display: block;
+}
+.button2:hover span:nth-child(1) {
+  filter: hue-rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3a86ff);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.button2:hover span:nth-child(2) {
+  filter: hue-rotate(60deg);
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #3a86ff);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.button2:hover span:nth-child(3) {
+  filter: hue-rotate(120deg);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, #3a86ff);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%,
+  100% {
+    height: 2px;
+    right: 100%;
+  }
+}
+.button2:hover span:nth-child(4) {
+  filter: hue-rotate(300deg);
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #3a86ff);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.sensor__Button {
+  background-color: #355c7d;
+}
+.diary__button {
+  background-color: #fa7857 !important;
+}
+.diary__button:hover {
+  color: white;
+}
+
+/* Popup */
+.overlay__popup {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay__popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup1,
+.popup2 {
+  max-height: 49vh;
+  overflow-y: scroll;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup1 h2,
+.popup2 h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup1 .close,
+.popup2 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup1 .close:hover,
+.popup2 .close:hover {
+  color: #06d85f;
+}
+.popup1 .content,
+.popup2 .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/* table */
+#table1 tr:nth-of-type(even) {
+  background: aliceblue;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: scroll;
+}
+
+table tr th {
+  background-color: mediumaquamarine;
+}
+
+tr th,
+tr td {
+  border: 1px solid #ddd;
+  padding: 0.2rem;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
